@@ -1,7 +1,6 @@
 models:
-  classifier : "C:\\Users\\rohal\\Downloads\\Loan Approval System\\models\\stage_1_rf_classifier_pipeline.pkl"
-  regressor : "C:\\Users\\rohal\\Downloads\\Loan Approval System\\models\\stage_2_rf_regressor_pipeline.pkl"
-
+  classifier : "models\\stage_1_rf_classifier_pipeline.pkl"
+  regressor : "models\\stage_2_rf_regressor_pipeline.pkl"
 ui:
   default_inputs:
     no_of_dependents: 3
