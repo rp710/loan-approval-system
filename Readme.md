@@ -33,16 +33,33 @@ The machine learning pipeline implements `scikit-learn`'s `SimpleImputer`, `Stan
 * **Classifier**: A `RandomForestClassifier` trained to predict the binary `loan_status` (Approved/Rejected)[cite: 2]. It is saved as `stage_1_rf_classifier_pipeline.pkl`[cite: 2].
 * **Regressor**: A `RandomForestRegressor` trained exclusively on approved applicants to predict `loan_amount`[cite: 2]. It is saved as `stage_2_rf_regressor_pipeline.pkl`[cite: 2].
 
-## Setup & Installation
-1. Create venv
--uv venv
--uv pip install -r requirements.txt
+## Quickstack (local)
+1. Create venv:
+- uv venv
+- uv pip install -r requirements.txt
 2. Put your trained `stage_1...pkl` and `stage_2...pkl` files in `models\`.
-3. Run locally:
+3. Run locally : 
+- Interface/UI : `uv run streamlit run streamlit_app.py`
 - CLI : `uv run python main.py`
 
-## Config 
-See `config.yaml` for runtime parameters(models paths)
+## Config
+See `config.yaml` for runtime paramters (models paths)
 
-## Note:
-- make sure the version used to create the model is same as your local environment where you are testing the main.py or streamlit app.
+## To install/freeze additional libraries using UV :
+```bash
+uv pip install -r requirements.txt
+uv pip freeze > requirements.txt
+```
+
+## Git Instructions
+- git init
+- git add .
+- git commit -m 'message'
+- git remote add origin https://url.git
+- git pull origin main --allow-unrelated-histories
+- git push -u origin main.
+
+
+## Note : 
+- Make sure the version used to create the model is same as your local environment where you are testing the main.py or streamlit app.
+- We are using python 3.12 for our virtual environment.
